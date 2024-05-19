@@ -1,0 +1,43 @@
+ACESSOS
+
+PESQUISA ID
+
+http://localhost/quimica/index.html
+
+
+VERIFICAR SE BD ESTA CONECTADO
+
+
+http://localhost/quimica/test_connection.php
+
+
+CADASTRAR NOVOS ELEMENTOS A PARTIR DA WEB
+
+
+http://localhost/quimica/cadastro.html
+
+
+POR ENQUANTO É ISSO
+
+
+
+_____________________________________________________________________________________________
+
+
+PARA DE SER RETARDADO!!!!!
+
+TA VENDO OS ARQUIVOS DUPLICADOS COM "_original"
+ENTÃO...ESSA É A VERSÃO SEM CSS ENTAO NÃO PERDE SEU MULA
+
+
+SEGUE OS LINKS PENSO EU QUE NÃO MUDOU
+
+
+http://localhost/quimica/cadastro.html
+
+
+
+http://localhost/quimica/index.html
+
+
+É.... ACHO QUE NÃO MUDOU

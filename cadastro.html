@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Elemento</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastrar Novo Elemento Químico</h2>
+        <form action="processar_cadastro.php" method="POST">
+            <label for="id">ID:</label>
+            <input type="number" id="id" name="id" required>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="massa_atomic">Massa Atômica:</label>
+            <input type="number" step="0.0001" id="massa_atomic" name="massa_atomic" required>
+            <label for="distribuicao_eletronica">Distribuição Eletrônica:</label>
+            <input type="text" id="distribuicao_eletronica" name="distribuicao_eletronica" required>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>
