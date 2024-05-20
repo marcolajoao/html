@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #164227;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #eadfdf;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 20);
+    border-radius: 10px;
+    text-align: center; /* Centraliza o conteúdo do container TELA INICIAL INTEX.HTML */
+}
+
+h2 {
+    color: #333;
+    border-top: #ff0606
+    
+}
+
+form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="number"], input[type="submit"] { /* DIV INICIA PARA BUSCXA DE ELEMENTOS
+                                                                [DIV INICIAL]*/
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 5px;
+    align-items: center;
+    border: 2.5px groove #5e5a5a;
+    border-radius: 100px;
+}
+
+input[type="submit"] {  /* DIV INICIA PARA BUSCXA DE ELEMENTOS */
+    background-color: #007BFF;
+    align-items: center;
+    color: #ffffff; /* COR ENTRO "CALCULAR" */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.result { /* ESSE CAMPO AQUI MECHE NA JANELA DO RESULTADO DO ELEMENTO
+             COR DA JANELA TAMANHO E NOS RESULTADO CORES E OS CARAI */
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #cecece;
+    border-radius: 100px;
+    border: 5px solid #41584b;
+    font-size: 30px; /* Aumenta o tamanho do texto */
+    line-height: 2; /* Adiciona dois espaços entre as linhas */
+    text-align: center; /* Centraliza o texto do resultado */
+    width: 90%; /* Aumenta a largura */
+    max-width: 800px; /* Aumenta a largura máxima */
+    box-shadow: 0 0 10px rgba(232, 9, 9, 0.1);
+}
+
