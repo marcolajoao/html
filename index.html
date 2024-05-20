@@ -8,6 +8,67 @@
 </head>
 <body>
     <h1>Tabela de Elementos</h1>
+
+    <form id="buscar-form">
+        <label for="numero-atomico">Digite o Número Atômico:</label>
+        <input type="number" id="numero-atomico" name="numero-atomico" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <table id="elementos-tabela" border="1">
+        <thead>
+            <tr>
+                <th>Número Atômico</th>
+                <th>Nome</th>
+                <th>Massa</th>
+                <th>Distribuição Eletrônica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchElementos() {
+            try {
+                const response = await fetch('elementos.json');  // URL do arquivo JSON no seu repositório
+                return await response.json();
+            } catch (error) {
+                console.error('Erro ao buscar os dados:', error);
+                return [];
+            }
+        }
+
+        document.getElementById('buscar-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Evita o reload da página ao enviar o formulário
+            const numeroAtomico = document.getElementById('numero-atomico').value;
+            const elementos = await fetchElementos();
+            const elementoEncontrado = elementos.find(elemento => elemento.numero_atomico == numeroAtomico);
+
+            const tabelaBody = document.getElementById('elementos-tabela').getElementsByTagName('tbody')[0];
+            tabelaBody.innerHTML = ''; // Limpa os resultados anteriores
+
+            if (elementoEncontrado) {
+                const row = tabelaBody.insertRow();
+                row.insertCell(0).innerText = elementoEncontrado.numero_atomico;
+                row.insertCell(1).innerText = elementoEncontrado.nome;
+                row.insertCell(2).innerText = elementoEncontrado.massa;
+                row.insertCell(3).innerText = elementoEncontrado.distribuicao_eletronica;
+            } else {
+                const row = tabelaBody.insertRow();
+                row.insertCell(0).innerText = 'N/A';
+                row.insertCell(1).innerText = 'Elemento não encontrado';
+                row.insertCell(2).innerText = 'N/A';
+                row.insertCell(3).innerText = 'N/A';
+            }
+        });
+    </script>
+</body>
+</html>
+
+<body>
+    <h1>Tabela de Elementos</h1>
     <table id="elementos-tabela" border="1">
         <thead>
             <tr>
