@@ -1,0 +1,15 @@
+[
+    {
+        "numero_atomico": 1,
+        "nome": "Hidrogênio",
+        "massa": 1.008,
+        "distribuicao_eletronica": "1s1"
+    },
+    {
+        "numero_atomico": 2,
+        "nome": "Hélio",
+        "massa": 4.0026,
+        "distribuicao_eletronica": "1s2"
+    }
+    // Adicione outros elementos aqui...
+]
