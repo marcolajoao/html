@@ -7,13 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Informe o Numero atômico para busca:</h2>
-        <form action="buscar.php" method="GET">
-            <label for="id">N° de Massa:</label>
-            <input type="number" id="id" name="id" required>
-            <input type="submit" value="Calcular">
-        </form>
-    </div>
+    <h1>Tabela de Elementos</h1>
+    <table id="elementos-tabela" border="1">
+        <thead>
+            <tr>
+                <th>Número Atômico</th>
+                <th>Nome</th>
+                <th>Massa</th>
+                <th>Distribuição Eletrônica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchElementos() {
+            try {
+                const response = await fetch('elementos.json');  // URL do arquivo JSON no seu repositório
+                const data = await response.json();
+                const tabelaBody = document.getElementById('elementos-tabela').getElementsByTagName('tbody')[0];
+
+                data.forEach(elemento => {
+                    const row = tabelaBody.insertRow();
+                    row.insertCell(0).innerText = elemento.numero_atomico;
+                    row.insertCell(1).innerText = elemento.nome;
+                    row.insertCell(2).innerText = elemento.massa;
+                    row.insertCell(3).innerText = elemento.distribuicao_eletronica;
+                });
+            } catch (error) {
+                console.error('Erro ao buscar os dados:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchElementos);
+    </script>
 </body>
 </html>
